@@ -37,4 +37,6 @@ function verMas(){
    //seccion.prepend(parrafo); //permite agregar un nodo al principio
    seccion.insertBefore(parrafo,botonVerMas);
 
+    botonVerMas.innerHTML = 'Ocultar';
+    botonVerMas.className = 'btn btn-danger';
 }
