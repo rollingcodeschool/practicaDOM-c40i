@@ -1,7 +1,13 @@
 let botonVerMas = document.querySelector("#btnVerMas");
-console.log(botonVerMas);
+let formulario = document.querySelector('form');
+console.log(formulario);
+
 //agregar un manejador de eventos
 botonVerMas.addEventListener("click", verMas);
+// formulario.addEventListener('submit', ()=>{
+//     leerDatoFormulario(arg1,arg2)
+// });
+formulario.addEventListener('submit', leerDatoFormulario);
 const colores = [
   "danger",
   "warning",
@@ -62,4 +68,13 @@ function verMas() {
     botonVerMas.innerHTML ='Ver mas';
     botonVerMas.className = 'btn btn-primary';
   }
+}
+
+function leerDatoFormulario(e){
+    e.preventDefault();
+    console.log(e);
+    console.log('desde la funcion del formulario');
+    let input = document.querySelector('input').value;
+    // let datoIngresado = input.value;
+    console.log(input)
 }
